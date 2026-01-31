@@ -29,10 +29,6 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 # Install Claude Code CLI globally
 RUN npm install -g @anthropic-ai/claude-code
 
-# Set HOME and create .claude directory with correct permissions
-ENV HOME=/home
-RUN mkdir -p /home/.claude && chown -R 1000:1000 /home/.claude
-
 # Create a working directory
 WORKDIR /workspace
 
