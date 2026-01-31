@@ -35,5 +35,8 @@ WORKDIR /workspace
 # Switch to non-root user (claude cannot run as root with --dangerously-skip-permissions)
 USER 1000:1000
 
+# Set HOME so claude can store auth tokens in ~/.claude
+ENV HOME=/home
+
 # Set the entrypoint to run Claude Code
 ENTRYPOINT ["claude", "--dangerously-skip-permissions"]
