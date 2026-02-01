@@ -26,6 +26,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
+RUN npx playwright install --with-deps chromium
+
 # Install Claude Code CLI globally
 RUN npm install -g @anthropic-ai/claude-code
 

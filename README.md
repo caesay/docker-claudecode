@@ -20,19 +20,19 @@ The container runs `claude --dangerously-skip-permissions` as its entrypoint. Mo
 ### PowerShell
 
 ```powershell
-docker run -it --rm --pull always -v ${HOME}/.claude:/home/.claude -v ${PWD}:/workspace caesay/claude-code
+docker run -it --rm --pull always -v ${HOME}/.claude:/home/ubuntu/.claude -v ${PWD}:/workspace caesay/claude-code
 ```
 
 ### Command Prompt (cmd)
 
 ```cmd
-docker run -it --rm --pull always -v %USERPROFILE%\.claude:/home/.claude -v %cd%:/workspace caesay/claude-code
+docker run -it --rm --pull always -v %USERPROFILE%\.claude:/home/ubuntu/.claude -v %cd%:/workspace caesay/claude-code
 ```
 
 ### Linux / macOS / Git Bash / WSL
 
 ```bash
-docker run -it --rm --pull always -v ~/.claude:/home/.claude -v $(pwd):/workspace caesay/claude-code
+docker run -it --rm --pull always -v ~/.claude:/home/ubuntu/.claude -v $(pwd):/workspace caesay/claude-code
 ```
 
 ## Flags Explained
@@ -42,7 +42,7 @@ docker run -it --rm --pull always -v ~/.claude:/home/.claude -v $(pwd):/workspac
 | `-it` | Interactive terminal |
 | `--rm` | Remove container when it exits |
 | `--pull always` | Always pull the latest image before running |
-| `-v ~/.claude:/home/.claude` | Persist Claude auth tokens and settings |
+| `-v ~/.claude:/home/ubuntu/.claude` | Persist Claude auth tokens and settings |
 | `-v ...:/workspace` | Mount current directory into the container |
 
 ## Authentication
